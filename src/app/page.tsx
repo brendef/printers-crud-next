@@ -26,7 +26,7 @@ export default () => {
 
   const RenderPrinters = () => {
     const printersMap = printers && printers.map((printer, key) => {
-      const status = getPrinterStatus(printer.status)
+      const status = getPrinterStatus(printer.status) 
       const to = `/printer/${printer.ip_address}`
       return (
         <div key={key}>
@@ -40,7 +40,7 @@ export default () => {
   }
 
   const RenderLoadingCard = () => {
-    return <div className='mt-20 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>{[...Array(5)].map(() => <SkeletonCard />)}</div>
+    return <div className='mt-20 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>{[...Array(5)].map((a, i) => <div className={a} key={i}><SkeletonCard /></div>)}</div>
   }
 
   const RenderPrintersFound = () => {

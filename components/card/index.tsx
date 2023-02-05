@@ -15,7 +15,7 @@ export default ({
             <div className='flex flex-col justify-between'>
                 <h2 className="text-gray-800 text-3xl font-semibold">{title}</h2>
                 <p className="mt-2 text-gray-600">{subTitle}</p>
-                <p className="mt-2 text-gray-600">{body}</p>
+                <div>{body}</div>
             </div>
             <div className="flex justify-end mt-4">
                 <p className="px-3 text-xl font-medium text-secondary-500 hover:bg-light-200">&rarr;</p>

@@ -1,4 +1,4 @@
-import { getPrinterData, getPrintersData } from "data"
+import { changePrinterNameByIpData, changePrinterStatusByIpData, getPrinterData, getPrintersData } from "data"
 import { createElement } from "react"
 
 export const getPrinters = async () => {
@@ -15,16 +15,30 @@ export const getPrinter = async (ip_address: string) => {
         })
 }
 
+export const changePrinterNameByIp = async (ip_address: string, name:string) => {
+  return await changePrinterNameByIpData(ip_address, name)
+    .then(response => {
+      return response
+    })
+}
+
+export const changePrinterStatusByIp = async (ip_address:string) => {
+  return await changePrinterStatusByIpData(ip_address)
+    .then(response => {
+      return response
+    })
+}
+
 export const getPrinterStatus = (status:number) => {
     const activeParagraph = createElement(
         'p',
-        {className: 'text-success-500' },
+        {style: {color: "green" }},
         'active'
     )
 
     const inactiveParagraph = createElement(
         'p',
-        {className: 'text-danger-500' },
+        {style: {color: "red" }},
         'inactive'
     )
     
