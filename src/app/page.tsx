@@ -2,6 +2,8 @@
 
 import { printer } from "assets"
 import Card from "components/card"
+import Search from "components/search"
+import SkeletonCard from "components/skeletonCard"
 import { getPrinters } from "lib/functions/printerFunctions"
 import { useEffect, useState } from "react"
 
@@ -22,36 +24,35 @@ export default () => {
     setIsLoading(false)
   }
 
-  const SkeletonCards = () => {
-    return (
-      <div role="status" className="max-w-sm animate-pulse">
-        <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-        <span className="sr-only">Loading...</span>
-      </div>
-
-    )
-  }
-
   const RenderPrinters = () => {
     const printersMap = printers && printers.map((printer, key) => {
       const status = printer.status ? <p className='text-success-500'>active</p> : <p className='text-danger-500'>inactive</p>
+      const to = `/printer/${printer.ip_address}`
       return (
         <div key={key}>
-          <Card title={printer.name} subTitle={printer.ip_address} body={status} to='#' css='' />
+          <Card title={printer.name} subTitle={printer.ip_address} body={status} to={to} css='' />
         </div>
       )
     })
     return (
-      <div className='p-4 grid grid-cols-4 gap-4'> {printersMap} </div>
+      <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'> {printersMap} </div>
     )
   }
 
-  return isLoading ? <SkeletonCards /> : (
-    <RenderPrinters />
-  )
+  const RenderLoadingCard = () => {
+    return <div className='mt-20 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>{[...Array(5)].map(() => <SkeletonCard />)}</div>
+  }
+
+  const RenderPrintersFound = () => {
+    return (
+      <div className='p-3'>
+        <div className='mt-2 mb-5'>
+          <Search />
+        </div>
+        <RenderPrinters />
+      </div>
+    )
+  }
+
+  return isLoading ? <RenderLoadingCard  /> : <RenderPrintersFound />
 }

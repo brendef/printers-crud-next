@@ -23,9 +23,9 @@ export type printer = {
 }
 
 export type card = {
-    title: string,
-    subTitle: string,
-    body: string,
-    to: string,
-    css: string
+    title?: string,
+    subTitle?: string,
+    body?: string | ReactNode,
+    to?: string,
+    css?: string
 }
