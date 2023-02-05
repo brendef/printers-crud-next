@@ -29,3 +29,9 @@ export type card = {
     to?: string,
     css?: string
 }
+
+export type ipParams = {
+  params?: {
+    ip_address?: string
+  }
+}

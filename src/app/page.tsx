@@ -4,7 +4,7 @@ import { printer } from "assets"
 import Card from "components/card"
 import Search from "components/search"
 import SkeletonCard from "components/skeletonCard"
-import { getPrinters } from "lib/functions/printerFunctions"
+import { getPrinters, getPrinterStatus } from "lib"
 import { useEffect, useState } from "react"
 
 export default () => {
@@ -26,7 +26,7 @@ export default () => {
 
   const RenderPrinters = () => {
     const printersMap = printers && printers.map((printer, key) => {
-      const status = printer.status ? <p className='text-success-500'>active</p> : <p className='text-danger-500'>inactive</p>
+      const status = getPrinterStatus(printer.status)
       const to = `/printer/${printer.ip_address}`
       return (
         <div key={key}>

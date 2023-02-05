@@ -18,7 +18,7 @@ export default ({
                 <p className="mt-2 text-gray-600">{body}</p>
             </div>
             <div className="flex justify-end mt-4">
-                <p className="px-3 text-xl font-medium text-secondary-500 hover:bg-light-50">&rarr;</p>
+                <p className="px-3 text-xl font-medium text-secondary-500 hover:bg-light-200">&rarr;</p>
             </div>
         </div>
       </Link>
