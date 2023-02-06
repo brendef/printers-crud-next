@@ -76,9 +76,41 @@ export default ({ params }: ipParams) => {
     return <div>{getPrinterStatus(+ printerStatus)}</div>
   }
 
+  const RenderDelete = () => {
+    return (
+      <div className="my-2">
+        <button className="py-2 px-4 w-full bg-danger-500 hover:bg-danger-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" onDoubleClick={deletePrinter} type='button'>remove printer</button>
+        <p className="text-red-500 text-xs italic">double click "remove printer" to remove product.</p>
+        <p className="text-red-500 text-xs italic">warning! this is perminent.</p>
+      </div>
+    )
+  }
+
+  const RenderBack = () => {
+    return (
+      <div className='my-2'>
+        <button className="py-2 px-4 w-full bg-secondary-500 hover:bg-secondary-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" onClick={router.back} type='button'> Back </button>
+      </div>
+    )
+  }
+
+  const handleCancel = () => {
+    setInEditMode(!inEditMode);
+    setPrinterName(printer.name)
+    setPrinterStatus(!!printer.status)
+  }
+
+  const RenderCancel = () => {
+    return (
+      <div className='my-2'>
+        <button className="py-2 px-4 w-full bg-secondary-500 hover:bg-secondary-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" onClick={handleCancel} type='button'> cancel </button>
+      </div>
+    )
+  }
+
   return isLoading ? <ParagraphSkeleton amount={3} /> : (
     <div className='flex justify-center'>
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-lg">
         <div className="p-8">
           <div className="mb-6">
             <label className="block text-gray-700 text-lg font-bold mb-2" htmlFor="printer-name"> printer name </label>
@@ -97,11 +129,8 @@ export default ({ params }: ipParams) => {
           <div className='my-2'>
             <button className="py-2 px-4 w-full bg-primary-500 hover:bg-primary-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" onClick={handleEditUpdate} type='button'> {inEditMode ? 'update' : 'edit'} printer </button>
           </div>
-          <div className="my-2">
-            <button className="py-2 px-4 w-full bg-danger-500 hover:bg-danger-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" onDoubleClick={deletePrinter} type='button'>remove printer</button>
-            <p className="text-red-500 text-xs italic">double click "remove printer" to remove product.</p>
-            <p className="text-red-500 text-xs italic">warning! this is perminent.</p>
-          </div>
+          {inEditMode && <RenderCancel />}
+          {inEditMode ? <RenderDelete /> : <RenderBack />}
         </div>
       </div>
     </div>

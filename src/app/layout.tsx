@@ -17,7 +17,11 @@ export default ({
 
     const backgroundColour = 'bg-primary-500'
 
-    const buttonsLinks = [{text:'add printer', to:'/new'}]
+    const buttonsLinks = [
+      // {text: "\u{21BB}" , to:'/'},
+      // {text: "refresh" , to:'/'},
+      {text:'add printer', to:'/new'}
+    ]
 
     return <Navbar title={title} buttonLinks={buttonsLinks} padding={padding} backgroundColour={backgroundColour} />
   }
