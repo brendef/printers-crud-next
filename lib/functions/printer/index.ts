@@ -1,3 +1,4 @@
+import { bodyParams } from "assets"
 import { addPrinterData, changePrinterNameByIpData, changePrinterStatusByIpData, getPrinterData, getPrintersData, removePrinterByIpData } from "data"
 import { createElement } from "react"
 
@@ -36,7 +37,7 @@ export const removePrinterByIp = async (ip_address:string) => {
     })
 }
 
-export const addPrinter = async (bodyParams:any) => {
+export const addPrinter = async (bodyParams:bodyParams) => {
   return await addPrinterData(bodyParams)
     .then((response) => {
       return response

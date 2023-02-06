@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { BaseSyntheticEvent, ReactNode } from "react"
 
 export type navButton = {
     text: string,
@@ -20,7 +20,7 @@ export type navbar = {
 
 export type postRequest = {
     path: string,
-    bodyParams: Object[],
+    bodyParams: bodyParams,
     useBaseURL: String | boolean
 }
 
@@ -58,4 +58,16 @@ export type ipParams = {
     params?: {
         ip_address?: string
     }
+}
+
+export type inputFieldType = {
+    label:string,
+    type:string,
+    onchange: (event: BaseSyntheticEvent) => void
+  }
+
+export type bodyParams = {
+  name:string,
+  ip_address:string,
+  status:number
 }

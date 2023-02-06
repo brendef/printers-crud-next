@@ -1,15 +1,17 @@
 'use client'
 
+import { inputFieldType } from "assets"
 import { addPrinter } from "lib"
 import { useRouter } from "next/navigation"
-import { useState } from "react"
+import { BaseSyntheticEvent, HTMLAttributeAnchorTarget, SyntheticEvent, useState } from "react"
+
 
 export default () => {
 
   const router = useRouter()
 
-  const [printerName, setPrinterName] = useState()
-  const [ipAddress, setIpAddress] = useState()
+  const [printerName, setPrinterName] = useState<string>()
+  const [ipAddress, setIpAddress] = useState<string>()
   const [printerStatus, setPrinterStatus] = useState(0)
 
   const RenderStatusCheckbox = () => {
@@ -27,23 +29,15 @@ export default () => {
     )
   }
 
-  const handleAddName = (text:any) => {
-    setPrinterName(text)
-  }
-
-  const handleAddIp = (text:any) => {
-    setIpAddress(text)
-  }
-
   const inputFields = [
-    { label: 'printer name', type: 'text', onchange: (e:any) => handleAddName(e.target.value) },
-    { label: 'ip address', type: 'text', onchange: (e:any) => handleAddIp(e.target.value) },
+    { label: 'printer name', type: 'text', onchange: (event:BaseSyntheticEvent) => setPrinterName(event?.target.value) },
+    { label: 'ip address', type: 'text', onchange: (event:BaseSyntheticEvent) => setIpAddress(event.target.value) },
   ]
 
   const submitNewPrinter = () => {
     const printerDetails = {
-      name: printerName,
-      ip_address: ipAddress,
+      name: String(printerName),
+      ip_address: String(ipAddress),
       status: printerStatus
     }
 
@@ -52,12 +46,12 @@ export default () => {
         router.push('/') 
       })
   }
-  
+   
   return (
     <div className='flex justify-center'>
       <div className="w-full max-w-md">
         <div className="p-8">
-          {inputFields.map((field:any, key:number) => (
+          {inputFields.map((field:inputFieldType, key:number) => (
             <div key={key} className='my-2'>
               <label className="block text-gray-700 text-lg font-bold my-4" htmlFor="printer-name"> { field.label } </label>
               <input className="shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" onChange={field.onchange} id={field.label.split(' ').join('_').toLowerCase()} type={field.type} placeholder={`${field.label}`} />
