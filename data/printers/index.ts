@@ -10,3 +10,5 @@ export const changePrinterNameByIpData = async (ip_address:string, name:string) 
 export const changePrinterStatusByIpData = async (ip_address:string) => await get({ useBaseURL: BASE_URL, path:`/change_status/${ip_address}`} )
 
 export const removePrinterByIpData = async (ip_address:string) => await del({ useBaseURL: BASE_URL, path: `/remove_printer/${ip_address}`})
+
+export const addPrinterData = async (bodyParams:any) => await post({useBaseURL: BASE_URL, bodyParams, path:'/add_printer'})

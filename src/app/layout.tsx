@@ -13,16 +13,13 @@ export default ({
       colour: 'text-white'
     }
 
-    const navLinks = [
-      { text: 'about', to: '/about' },
-      { text: 'contact', to: '/contact' }
-    ]
-
     const padding = 'py-4 px-5'
 
     const backgroundColour = 'bg-primary-500'
 
-    return <Navbar title={title} padding={padding} backgroundColour={backgroundColour} />
+    const buttonsLinks = [{text:'add printer', to:'/new'}]
+
+    return <Navbar title={title} buttonLinks={buttonsLinks} padding={padding} backgroundColour={backgroundColour} />
   }
 
   return (

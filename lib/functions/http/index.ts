@@ -9,13 +9,6 @@ export const post = async ({
     try {
         const url = usePath
 
-        var urlencoded = new URLSearchParams();
-        bodyParams.map((params: any) => {
-            const entries = Object.entries(params)[0]
-            
-            urlencoded.append(entries[0], String(entries[1]))
-        })
-
         const params: RequestInit = {
             method: "POST",
             headers: {
@@ -23,7 +16,7 @@ export const post = async ({
                 Accept: "application/json",
             },
             redirect: "follow",
-            body: urlencoded,
+            body: JSON.stringify(bodyParams),
         };
 
         const response = await fetch(url, params)

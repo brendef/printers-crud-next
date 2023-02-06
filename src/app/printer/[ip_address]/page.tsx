@@ -30,13 +30,11 @@ export default ({ params }: ipParams) => {
 
     printerName != printer.name && changePrinterNameByIp(String(ip_address), String(printerName))
       .then(response => {
-        console.log(response)
         printer.name = String(printerName)
       })
 
     !printerStatus === !!printer.status && changePrinterStatusByIp(String(ip_address))
       .then(response => {
-        console.log(response)
         printer.status = + printerStatus
         setPrinterStatus(printerStatus)
       })
@@ -93,7 +91,7 @@ export default ({ params }: ipParams) => {
             <p className="appearance-none rounded w-full py-2 text-gray-700" id="ip_address" >{ip_address} </p>
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 text-lg font-bold mb-2" htmlFor="ip_address"> status</label>
+            <label className="block text-gray-700 text-lg font-bold mb-2" htmlFor="checkbox"> status</label>
             {inEditMode ? <RenderStatusCheckbox /> : <RenderPrinterStatus />}
           </div>
           <div className='my-2'>

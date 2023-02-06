@@ -1,5 +1,4 @@
-import { navbar, navButton } from 'assets'
-import React, { useState } from 'react'
+import { navbar } from 'assets'
 
 export default ({
     title = { text: 'Website Name', to: '/', colour: 'text-black' },
@@ -26,7 +25,7 @@ export default ({
 
     const RenderNavLinkButtons = ({navLinkButtons}:any) => {
         return (
-            navLinkButtons.length > 0 ? navLinkButtons.forEach((button:any)=>
+            navLinkButtons.length > 0 ? navLinkButtons.map((button:any)=>
             <a href={button.to}><button className="bg-primary-400 text-md text-white font-bold py-2 px-4 rounded"> {button.text} </button></a>
         ):<></>) 
         
