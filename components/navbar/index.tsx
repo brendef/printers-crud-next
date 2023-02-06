@@ -1,10 +1,12 @@
+import { navbar, navButton } from 'assets'
 import React, { useState } from 'react'
 
 export default ({
     title = { text: 'Website Name', to: '/', colour: 'text-black' },
     padding = 'px-2 py-4',
+    buttonLinks = [],
     backgroundColour = 'bg-white'
-}: any) => {
+}: navbar) => {
 
     // Scopped CSS
     const renderCSS = () => {
@@ -22,6 +24,15 @@ export default ({
 
     const useBackground = backgroundColour.length === 0 ? 'transparent' : backgroundColour
 
+    const RenderNavLinkButtons = ({navLinkButtons}:any) => {
+        return (
+            navLinkButtons.length > 0 ? navLinkButtons.forEach((button:any)=>
+            <a href={button.to}><button className="bg-primary-400 text-md text-white font-bold py-2 px-4 rounded"> {button.text} </button></a>
+        ):<></>) 
+        
+
+    }
+
     return (
         <>
             {renderCSS()}
@@ -30,10 +41,10 @@ export default ({
                 <div className={`flex justify-between`}>
                     <div className='flex items-center'>
                         <a className={`text-xl font-bold ${useTitleColour} lg:text-xl`} href={useTitleLink}>
-                            {useTitle}
+                            {String(useTitle)}
                         </a>
                     </div>
-                    <button className="bg-primary-400 text-md text-white font-bold py-2 px-4 rounded"> add printer </button>
+                    <div><RenderNavLinkButtons navLinkButtons={buttonLinks} /></div>
                 </div>
             </nav>
 

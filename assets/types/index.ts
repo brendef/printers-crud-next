@@ -1,5 +1,23 @@
 import { ReactNode } from "react"
 
+export type navButton = {
+    text: string,
+    to: string
+}
+
+type navTitle = {
+    text: string,
+    to?: string,
+    colour?: string
+}
+
+export type navbar = {
+    title: navTitle,
+    padding?: string,
+    buttonLinks?: navButton[],
+    backgroundColour: string
+}
+
 export type postRequest = {
     path: string,
     bodyParams: Object[],
@@ -8,6 +26,12 @@ export type postRequest = {
 
 export type getRequest = {
     path: string,
+    useBaseURL: String | boolean
+}
+
+export type deleteRequest = {
+    path: string,
+    bodyParams?: Object[],
     useBaseURL: String | boolean
 }
 
@@ -31,7 +55,7 @@ export type card = {
 }
 
 export type ipParams = {
-  params?: {
-    ip_address?: string
-  }
+    params?: {
+        ip_address?: string
+    }
 }

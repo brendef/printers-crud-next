@@ -22,7 +22,7 @@ export default ({
 
     const backgroundColour = 'bg-primary-500'
 
-    return <Navbar title={title} navLinks={navLinks} padding={padding} backgroundColour={backgroundColour} />
+    return <Navbar title={title} padding={padding} backgroundColour={backgroundColour} />
   }
 
   return (

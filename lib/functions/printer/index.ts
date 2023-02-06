@@ -1,4 +1,4 @@
-import { changePrinterNameByIpData, changePrinterStatusByIpData, getPrinterData, getPrintersData } from "data"
+import { changePrinterNameByIpData, changePrinterStatusByIpData, getPrinterData, getPrintersData, removePrinterByIpData } from "data"
 import { createElement } from "react"
 
 export const getPrinters = async () => {
@@ -24,6 +24,13 @@ export const changePrinterNameByIp = async (ip_address: string, name:string) => 
 
 export const changePrinterStatusByIp = async (ip_address:string) => {
   return await changePrinterStatusByIpData(ip_address)
+    .then(response => {
+      return response
+    })
+}
+
+export const removePrinterByIp = async (ip_address:string) => {
+  return await removePrinterByIpData(ip_address)
     .then(response => {
       return response
     })
