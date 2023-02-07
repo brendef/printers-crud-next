@@ -70,6 +70,7 @@ While the Home Screen is loading. Cards with a pulsing skeleton text will displa
 ![Skeleton Cards On Home Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/skeleton-home.png?raw=true)
 
 Home Screen Where All Printers Are Displayed:
+
 The home screen contains the search bar that searches for the printers by name and displays them only. 
 
 The home screen also contains a toggle button that allows a user to only show active or inactive printers. There is a dedicated checkbox that can be used to enable and disable this feature. 
