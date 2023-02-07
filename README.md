@@ -87,7 +87,8 @@ Home Screen With Filter To Only Show Active Printers:
 
 ![Home Screen with active filter turned on](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/filter-active.png?raw=true)
 
-Edit Printer Screen:
+Edit Printer Screen \
+(PLEASE NOTE: in order to prevent accidental deleting of a printer. The "Remove Printer" button needs to be double clicked for a printer to be removed):
 
 ![Screenshot of the Edit Printer Screen](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/edit-printer.png?raw=true)
 
