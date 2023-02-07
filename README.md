@@ -3,10 +3,9 @@
 
 An app built in Next 13 for TallOrder. 
 
-**Domain:** brendans-tallorder-test.com 
+**Domain:** http://brendans-tallorder-test.com:8080
 
-**Please Note**: This app does not run over https just yet. So please allow your browser to visit the website. It may give you a warning that your connection is not seccure.
-
+**PLEASE NOTE**: This app does not run over https just yet. So please allow your browser to visit the website. It may give you a warning that your connection is not seccure.
 
 
 ## Tech Stack
@@ -16,6 +15,8 @@ An app built in Next 13 for TallOrder.
 **Server:** GoLang
 
 **Cloud:** AWS RDS, AWS EC2
+
+**IDE/Editor:** VIM (Lunar Vim - NVIM), VS Code
 
 
 ## Features
