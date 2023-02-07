@@ -3,7 +3,7 @@
 
 An app built in Next 13 for TallOrder. 
 
-**Domain:** http://brendans-tallorder-test.com:8080
+**Domain:** http://brendans-tallorder-test.com:3000
 
 **PLEASE NOTE**: This app does not run over https just yet. So please allow your browser to visit the website. It may give you a warning that your connection is not seccure.
 
