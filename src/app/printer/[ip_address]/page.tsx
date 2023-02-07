@@ -1,6 +1,7 @@
 'use client'
 
 import { EMPTY_PRINTER, ipParams, printer } from "assets"
+import { BackButton } from "components/buttons/back"
 import ParagraphSkeleton from "components/ParagraphSkeleton"
 import { changePrinterNameByIp, changePrinterStatusByIp, getPrinter, getPrinterStatus, removePrinterByIp } from "lib"
 import { useRouter } from "next/navigation"
@@ -86,14 +87,6 @@ export default ({ params }: ipParams) => {
     )
   }
 
-  const RenderBack = () => {
-    return (
-      <div className='my-2'>
-        <button className="py-2 px-4 w-full bg-secondary-500 hover:bg-secondary-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" onClick={router.back} type='button'> Back </button>
-      </div>
-    )
-  }
-
   const handleCancel = () => {
     setInEditMode(!inEditMode);
     setPrinterName(printer.name)
@@ -130,7 +123,7 @@ export default ({ params }: ipParams) => {
             <button className="py-2 px-4 w-full bg-primary-500 hover:bg-primary-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" onClick={handleEditUpdate} type='button'> {inEditMode ? 'update' : 'edit'} printer </button>
           </div>
           {inEditMode && <RenderCancel />}
-          {inEditMode ? <RenderDelete /> : <RenderBack />}
+          {inEditMode ? <RenderDelete /> : <BackButton router={router} />}
         </div>
       </div>
     </div>

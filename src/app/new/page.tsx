@@ -1,6 +1,7 @@
 'use client'
 
 import { inputFieldType } from "assets"
+import { BackButton } from "components/buttons"
 import { addPrinter } from "lib"
 import { useRouter } from "next/navigation"
 import { BaseSyntheticEvent, HTMLAttributeAnchorTarget, SyntheticEvent, useState } from "react"
@@ -59,8 +60,11 @@ export default () => {
           ))}
           <label className="block text-gray-700 text-lg font-bold my-4" htmlFor="status"> status</label>
           <RenderStatusCheckbox />
-          <div className='my-6'>
+          <div className='mt-6 mb-2'>
             <button onClick={submitNewPrinter} className="py-2 px-4 w-full bg-primary-500 hover:bg-primary-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" type='button'> add printer </button>
+          </div>
+          <div className='my-2'>
+            <BackButton router={router} />
           </div>
         </div>
       </div>
