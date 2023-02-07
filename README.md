@@ -132,10 +132,11 @@ My goal was to get something up and running ASAP. EC2s are super simple make a p
 
 ## How can this project be improved
 
-There are so many way this project could be improved. Here are three cool features that could still be implemented:
+There are so many way this project could be improved. Here are four cool features that could still be implemented:
 1. Automatically detect printers on a newtwork and display them on screen
 2. Show or Hide printers, instead of deleting them from the database
 3. Show printer activity in addition and other information to state. (eg. "printing" or "low on ink")
+4. Display success and failure messages on the screen. This is for the user to have more information about what is going on.
 
 ## Feedback
 
