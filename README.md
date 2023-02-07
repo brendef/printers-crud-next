@@ -129,6 +129,14 @@ Next is my favourite Framework. I used next 13 because I was looking for a good 
 #### Why AWS EC2
 
 My goal was to get something up and running ASAP. EC2s are super simple make a perfect dev environmnet. I do belive a serverless product such as *Amplify* for the front end and *lambda* would have been better. I will migrate this later one to use these technologies for sure!
+
+## How can this project be improved
+
+There are so many way this project could be improved. Here are three cool features that could still be implemented:
+1. Automatically detect printers on a newtwork and display them on screen
+2. Show or Hide printers, instead of deleting them from the database
+3. Show printer activity in addition and other information to state. (eg. "printing" or "low on ink")
+
 ## Feedback
 
 I really appreciate feedback. Please reach out to me at brendan.defaria@gmail.com
