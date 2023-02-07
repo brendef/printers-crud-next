@@ -66,26 +66,35 @@ Start the server
 
 ## Screenshots
 
-Home Screen where all printers are displayed:
-![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/home.png?raw=true)
+While the Home Screen is loading. Cards with a pulsing skeleton text will display to show the user that the data is loading:\
+![Skeleton Cards On Home Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/skeleton-home.png?raw=true)
 
-Home Screen with filter to only show inactive printers:
-![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/filter-active.png?raw=true)
+Home Screen Where All Printers Are Displayed:
+The home screen contains the search bar that searches for the printers by name and displays them only. \
+The home screen also contains a toggle button that allows a user to only show active or inactive printers. There is a dedicated checkbox that can be used to enable and disable this feature. \
+The home screen is responsive and looks great on mobile.\
+![Home Screen Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/home.png?raw=true)
 
-Home Screen with filter to only show active printers:
-![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/filter-active.png?raw=true)
+Home Screen With Filter To Only Show Inactive Printers:
+![Home Screen with inactive filter turned on](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/filter-active.png?raw=true)
+
+Home Screen With Filter To Only Show Active Printers:
+![Home Screen with active filter turned on](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/filter-active.png?raw=true)
 
 Edit Printer Screen:
-![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/edit-printer.png?raw=true)
+![Screenshot of the Edit Printer Screen](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/edit-printer.png?raw=true)
+
+While The Printer Info Screen is loading. A similar pulsing skeleton text to the homescreen will be displayed to show the user that the data is loading:\
+![Skeleton Text in View Printer Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/skeleton-view.png?raw=true)
 
 Add New Printer Screen:
-![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/new-printer.png?raw=true)
+![Screenshot of the Add New Printer Screen](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/new-printer.png?raw=true)
 
 View Printer Information Screen:
-![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/view-printer.png?raw=true)
+![Screen shot of the printer information page](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/view-printer.png?raw=true)
 
-The Search Bar in action:
-![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/search-printer.png?raw=true)
+The Search Bar In Action:
+![A screenshot of the Search Bar being used](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/search-printer.png?raw=true)
 
 
 ## Related
