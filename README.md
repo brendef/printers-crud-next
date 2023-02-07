@@ -1,38 +1,131 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Brendan de Faria's Tall Order Test
 
-First, run the development server:
+An app built in Next 13 for TallOrder. 
+
+**Domain:** brendans-tallorder-test.com 
+
+**Please Note**: This app does not run over https just yet. So please allow your browser to visit the website. It may give you a warning that your connection is not seccure.
+
+
+
+## Tech Stack
+
+**Client:** Next.js 13, TailwindCSS
+
+**Server:** GoLang
+
+**Cloud:** AWS RDS, AWS EC2
+
+
+## Features
+
+- Create / Add New Printers
+- View All Printers
+- Filter Printers By Status (Active/Inactive)
+- Search Printers By Name
+- Edit Printers (Change name and/or Status)
+- Responsive Design
+
+
+## Lessons Learned
+
+1. Next 13 was different. Having bootstraped and built many next apps in the past. I had to get used to the new features in Next 13. I really enjoyed using Next 13 and prefer it to previous versions. 
+
+2. Found an amazing process manager for node js called pm2. 
+
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/brendef/tallorder-printers-crud.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd tallorder-printers-crud
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Install dependencies
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start the server
 
-## Learn More
+```bash
+  npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Home Screen where all printers are displayed:
+![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/home.png?raw=true)
 
-## Deploy on Vercel
+Home Screen with filter to only show inactive printers:
+![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/filter-active.png?raw=true)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Home Screen with filter to only show active printers:
+![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/filter-active.png?raw=true)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Edit Printer Screen:
+![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/edit-printer.png?raw=true)
+
+Add New Printer Screen:
+![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/new-printer.png?raw=true)
+
+View Printer Information Screen:
+![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/view-printer.png?raw=true)
+
+The Search Bar in action:
+![App Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/search-printer.png?raw=true)
+
+
+## Related
+
+The rest api backend that this project connects to is built in GoLang. To see the code and install locally see the repo bellow.
+
+[Printer Go Lang API](https://github.com/brendef/tallorder-printer-api.git)
+
+
+## FAQ
+
+#### Why does this not work over SSL/HTTPS
+
+I just need to install an SSL Certificate and configure nginx or apache then it should be good to go.
+
+#### Why Next 13
+
+Next is my favourite Framework. I used next 13 because I was looking for a good reason to try out the new features. 
+
+#### Why AWS EC2
+
+My goal was to get something up and running ASAP. EC2s are super simple make a perfect dev environmnet. I do belive a serverless product such as *Amplify* for the front end and *lambda* would have been better. I will migrate this later one to use these technologies for sure!
+## Feedback
+
+I really appreciate feedback. Please reach out to me at brendan.defaria@gmail.com
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Authors
+
+- [@brendef](https://www.github.com/brendef)
+
+
+## 🚀 About Me
+I am a developer who is looking to one day create complex scripts and machine learning algorithms.
+
+
+## 🛠 Skills
+Javascript, Python, MySql, NoSql, PHP, Docker, AWS
+
