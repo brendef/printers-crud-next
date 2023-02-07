@@ -66,7 +66,8 @@ Start the server
 
 ## Screenshots
 
-While the Home Screen is loading. Cards with a pulsing skeleton text will display to show the user that the data is loading:\
+While the Home Screen is loading. Cards with a pulsing skeleton text will display to show the user that the data is loading:
+
 ![Skeleton Cards On Home Screenshot](https://github.com/brendef/tallorder-printers-crud/blob/main/screenshots/skeleton-home.png?raw=true)
 
 Home Screen Where All Printers Are Displayed:
