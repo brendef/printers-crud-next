@@ -61,7 +61,7 @@ Start the server
 
 While the Home Screen is loading. Cards with a pulsing skeleton text will display to show the user that the data is loading:
 
-![Skeleton Cards On Home Screenshot](https://github.com/brendef/--crud/blob/main/screenshots/skeleton-home.png?raw=true)
+![Skeleton Cards On Home Screenshot](https://github.com/brendef/printers-crud-next/blob/main/screenshots/skeleton-home.png?raw=true)
 
 Home Screen Where All  Are Displayed:
 
@@ -71,36 +71,36 @@ The home screen also contains a toggle button that allows a user to only show ac
 
 The home screen is responsive and looks great on mobile.
 
-![Home Screen Screenshot](https://github.com/brendef/--crud/blob/main/screenshots/home.png?raw=true)
+![Home Screen Screenshot](https://github.com/brendef/printers-crud-next/blob/main/screenshots/home.png?raw=true)
 
 Home Screen With Filter To Only Show Inactive :
 
-![Home Screen with inactive filter turned on](https://github.com/brendef/--crud/blob/main/screenshots/filter-active.png?raw=true)
+![Home Screen with inactive filter turned on](https://github.com/brendef/printers-crud-next/blob/main/screenshots/filter-active.png?raw=true)
 
 Home Screen With Filter To Only Show Active :
 
-![Home Screen with active filter turned on](https://github.com/brendef/--crud/blob/main/screenshots/filter-active.png?raw=true)
+![Home Screen with active filter turned on](https://github.com/brendef/printers-crud-next/blob/main/screenshots/filter-active.png?raw=true)
 
 Edit Printer Screen \
 (PLEASE NOTE: in order to prevent accidental deleting of a printer. The "Remove Printer" button needs to be double clicked for a printer to be removed):
 
-![Screenshot of the Edit Printer Screen](https://github.com/brendef/--crud/blob/main/screenshots/edit-printer.png?raw=true)
+![Screenshot of the Edit Printer Screen](https://github.com/brendef/printers-crud-next/blob/main/screenshots/edit-printer.png?raw=true)
 
 While The Printer Info Screen is loading. A similar pulsing skeleton text to the homescreen will be displayed to show the user that the data is loading:
 
-![Skeleton Text in View Printer Screenshot](https://github.com/brendef/--crud/blob/main/screenshots/skeleton-view.png?raw=true)
+![Skeleton Text in View Printer Screenshot](https://github.com/brendef/printers-crud-next/blob/main/screenshots/skeleton-view.png?raw=true)
 
 Add New Printer Screen:
 
-![Screenshot of the Add New Printer Screen](https://github.com/brendef/--crud/blob/main/screenshots/new-printer.png?raw=true)
+![Screenshot of the Add New Printer Screen](https://github.com/brendef/printers-crud-next/blob/main/screenshots/new-printer.png?raw=true)
 
 View Printer Information Screen:
 
-![Screen shot of the printer information page](https://github.com/brendef/--crud/blob/main/screenshots/view-printer.png?raw=true)
+![Screen shot of the printer information page](https://github.com/brendef/printers-crud-next/blob/main/screenshots/view-printer.png?raw=true)
 
 The Search Bar In Action:
 
-![A screenshot of the Search Bar being used](https://github.com/brendef/--crud/blob/main/screenshots/search-printer.png?raw=true)
+![A screenshot of the Search Bar being used](https://github.com/brendef/printers-crud-next/blob/main/screenshots/search-printer.png?raw=true)
 
 
 ## Related
