@@ -1,6 +1,4 @@
 
-# Brendan de Faria's  Test
-
 An app built in Next 13
 
 ## Tech Stack
