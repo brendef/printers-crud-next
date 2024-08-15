@@ -1,12 +1,7 @@
 
 # Brendan de Faria's  Test
 
-An app built in Next 13 for . 
-
-**Domain:** http://brendans--test.com:3000
-
-**PLEASE NOTE**: This app does not run over https just yet. So please allow your browser to visit the website. It may give you a warning that your connection is not seccure.
-
+An app built in Next 13
 
 ## Tech Stack
 
